@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Sentinelas Arcanos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=MedievalSharp&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/inscricao.css">
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-dragon logo-icon"></i>
+                <h1>Sentinelas Arcanos</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <div class="form-hero">
+            <h2>Ficha de Inscrição</h2>
+            <p>Preencha este pergaminho mágico para se juntar à nossa guilda lendária</p>
+        </div>
+
+        <div class="form-container">
+            <form id="inscricao-form">
+                <fieldset>
+                    <legend><i class="fas fa-user"></i> Dados do Aventureiro</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome de Guerra:</label>
+                        <input type="text" id="nome" name="nome" required autofocus placeholder="Ex: Arthas, o Destemido">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email (para corvo-correio):</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="senha">Senha Secreta:</label>
+                        <input type="password" id="senha" name="senha" required placeholder="••••••••">
+                    </div>
+                    
+                    <div class="medidas">
+                        <div class="form-group">
+                            <label for="nascimento">Data de Nascimento:</label>
+                            <input type="date" id="nascimento" name="nascimento">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="horario">Horário para Missões:</label>
+                            <input type="time" id="horario" name="horario">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone (Sinalizador Mágico):</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend><i class="fas fa-chart-bar"></i> Atributos</legend>
+                    <div class="medidas">
+                        <div class="form-group">
+                            <label for="forca">Força (1-20):</label>
+                            <input type="number" id="forca" name="forca" min="1" max="20" step="1" value="10">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inteligencia">Inteligência (1-20):</label>
+                            <input type="number" id="inteligencia" name="inteligencia" min="1" max="20" step="1" value="10">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend><i class="fas fa-star"></i> Especialização</legend>
+                    
+                    <div class="form-group">
+                        <label for="raca">Raça:</label>
+                        <select id="raca" name="raca" required>
+                            <option value="">Selecione sua linhagem...</option>
+                            <option value="humano">Humano</option>
+                            <option value="elfo">Elfo</option>
+                            <option value="anao">Anão</option>
+                            <option value="orc">Orc</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Classe Desejada:</label>
+                        <div class="opcoes-container">
+                            <div class="opcao-linha">
+                                <input type="radio" id="guerreiro" name="classe" value="guerreiro">
+                                <label for="guerreiro">Guerreiro</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="radio" id="mago" name="classe" value="mago">
+                                <label for="mago">Mago</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="radio" id="arqueiro" name="classe" value="arqueiro">
+                                <label for="arqueiro">Arqueiro</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="radio" id="ladino" name="classe" value="ladino">
+                                <label for="ladino">Ladino</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Habilidades Conhecidas:</label>
+                        <div class="opcoes-container">
+                            <div class="opcao-linha">
+                                <input type="checkbox" id="combate" name="habilidades" value="combate">
+                                <label for="combate">Combate com Espadas</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="checkbox" id="magia" name="habilidades" value="magia">
+                                <label for="magia">Magia Elemental</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="checkbox" id="alquimia" name="habilidades" value="alquimia">
+                                <label for="alquimia">Alquimia</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="checkbox" id="furtividade" name="habilidades" value="furtividade">
+                                <label for="furtividade">Furtividade</label>
+                            </div>
+                            <div class="opcao-linha">
+                                <input type="checkbox" id="arco" name="habilidades" value="arco">
+                                <label for="arco">Arco e Flecha</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend><i class="fas fa-scroll"></i> Histórico</legend>
+                    
+                    <div class="form-group">
+                        <label for="retrato">Envie seu Retrato (Foto):</label>
+                        <input type="file" id="retrato" name="retrato" accept="image/*">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="historia">História do Personagem (Backstory):</label>
+                        <textarea id="historia" name="historia" rows="8" placeholder="Conte-nos sobre sua jornada até aqui, suas conquistas e seus sonhos..."></textarea>
+                    </div>
+                </fieldset>
+                
+                <div class="form-buttons">
+                    <input type="reset" value="Limpar Ficha" class="reset-btn">
+                    <input type="submit" value="Enviar Inscrição" class="submit-btn" id="enviar">
+                </div>
+            </form>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar ao Portal
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Guilda dos Sentinelas Arcanos. Todos os direitos reservados.</p>
+            <p>Que sua lenda comece hoje, aventureiro!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('inscricao-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Efeito visual de sucesso
+            const submitBtn = document.getElementById('enviar');
+            const originalText = submitBtn.value;
+            
+            submitBtn.value = 'Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Criar efeito de confete
+                for(let i = 0; i < 50; i++) {
+                    createConfetti();
+                }
+                
+                alert('Sua inscrição foi enviada com sucesso! A Guilda dos Sentinelas Arcanos analisará sua ficha e entrará em contato em breve através do corvo-correio.');
+                
+                submitBtn.value = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+        
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.cssText = `
+                position: fixed;
+                width: 10px;
+                height: 10px;
+                background: var(--gold);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1000;
+                top: 0;
+                left: ${Math.random() * 100}%;
+                animation: confettiFall ${1 + Math.random() * 2}s linear forwards;
+            `;
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 3000);
+        }
+        
+        // Adicionar CSS para animação do confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes confettiFall {
+                0% {
+                    transform: translateY(-100px) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinelas Arcanos - Guilda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <h1>Sentinelas Arcanos</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <!-- Seção de Boas-Vindas -->
+        <section class="welcome-section">
+            <h2>Bem-vindo à Guilda dos Sentinelas Arcanos</h2>
+            <p>Uma irmandade lendária de heróis dedicados a proteger os reinos das trevas que se erguem. Nossos membros são os mais corajosos guerreiros, magos poderosos e especialistas em artes arcanas.</p>
+            <p>Explore as classes disponíveis e junte-se a nós nesta jornada épica!</p>
+        </section>
+
+        <!-- Carrossel de Classes -->
+        <section class="carousel-container">
+            <div class="carousel">
+                <!-- Item 1: Guerreiro -->
+                <div class="carousel-item">
+                    <a href="classe_guerreiro.html">
+                        <img src="https://www.clashroyaledicas.com/wp-content/uploads/2021/10/cavaleiro-dourado-clash-royale-campeao-1068x544.jpg" alt="Guerreiro">
+                    </a>
+                    <div class="carousel-caption">
+                        <h3>O Guerreiro</h3>
+                        <p>Mestre das armas e da armadura pesada</p>
+                    </div>
+                </div>
+                
+                <!-- Item 2: Mago -->
+                <div class="carousel-item">
+                    <a href="classe_mago.html">
+                        <img src="https://www.clashroyaledicas.com/wp-content/uploads/2020/10/arte-ilustracao-mago-eletrico-clash-royale-1024x629.jpg" alt="Mago">
+                    </a>
+                    <div class="carousel-caption">
+                        <h3>O Mago Arcano</h3>
+                        <p>Manipulador das forças primordiais do universo</p>
+                    </div>
+                </div>
+                
+                <!-- Item 3: Arqueiro -->
+                <div class="carousel-item">
+                    <a href="classe_arqueiro.html">
+                        <img src="https://www.clashroyaledicas.com/wp-content/uploads/2018/02/arqueiro-magico-animacao-comercial-14-747x420.jpg" alt="Arqueiro">
+                    </a>
+                    <div class="carousel-caption">
+                        <h3>O Arqueiro</h3>
+                        <p>Precisão mortal à distância</p>
+                    </div>
+                </div>
+                
+                <!-- Item 4: Ladino -->
+                <div class="carousel-item">
+                    <a href="classe_ladino.html">
+                        <img src="https://www.clashroyaledicas.com/wp-content/uploads/2022/12/manutencao-clash-royale-bandida.jpg" alt="Ladino">
+                    </a>
+                    <div class="carousel-caption">
+                        <h3>O Ladino</h3>
+                        <p>Mestre da furtividade e das artes obscuras</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões de navegação do carrossel -->
+            <button class="carousel-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </section>
+
+        <!-- Botão de Inscrição -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="inscricao.html" class="join-btn">Junte-se à Guilda!</a>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Guilda dos Sentinelas Arcanos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para o carrossel
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const items = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+            
+            // Função para atualizar o carrossel
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+            
+            // Evento para o botão próximo
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateCarousel();
+            });
+            
+            // Evento para o botão anterior
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                updateCarousel();
+            });
+            
+            // Inicializar o carrossel
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>
+
+
+
